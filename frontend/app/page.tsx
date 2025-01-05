@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import WalletConnectButton from '@/components/WalletConnect'
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 
 export default function Home() {
@@ -17,8 +17,10 @@ export default function Home() {
 
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-center text-center">
       <h1 className='text-4xl sm:text-6xl font-bold text-blue-500'>Welcome to Upscale: A scaling solution for NFTs</h1>
-              <WalletConnectButton />
+            <ConnectButton />
       </main>
+
+
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <p>Made with love by Aayushman</p>
       </footer>
