@@ -1,3 +1,10 @@
-// next.config.js
-require('ts-node').register();
-module.exports = require('./next.config.ts');
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  webpack: config => {
+    config.externals.push('pino-pretty', 'lokijs', 'encoding')
+    return config
+  },
+};
+
+module.exports = nextConfig;
